@@ -21,12 +21,16 @@ you can change and delete init password
 
 #### Links
 
-* Config repo: [https://github.com/rayeeta/argocd-app-config](https://github.com/rayeeta/argocd-app-config)
+* Config repo: [https://github.com/rayeeta/argocd-app-config]
+(https://github.com/rayeeta/argocd-app-config)
   
 * Docker repo: [https://hub.docker.com/repository/docker/ereta19/devopsdemo/general](https://hub.docker.com/repository/docker/ereta19/devopsdemo/general)
 
-* Install ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd)
+* Install ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd]
+(https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd)
 
-* Login to ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
+* Login to ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli]
+(https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
-* ArgoCD Configuration: [https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/)
+* ArgoCD Configuration: [https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/]
+(https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/)
