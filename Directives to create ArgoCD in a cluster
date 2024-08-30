@@ -1,4 +1,4 @@
-# Create a name space:
+* Create a namespace:
 kubectl create namespace argocd
 # Apply the yaml file that will install everything ArgoCD needs. Alternatively you can still download the file:
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
