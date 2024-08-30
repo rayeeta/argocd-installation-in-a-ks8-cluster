@@ -30,10 +30,19 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 * ArgoCD Configuration: [https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/)
 
 
+# What is ArgoCD
+Argo CD is an open-source continuous delivery (CD) tool designed for Kubernetes applications that follows the GitOps methodology. It enables users to manage application deployments by continuously monitoring the desired state defined in a Git repository and comparing it to the actual state in the Kubernetes cluster. Argo CD automatically reconciles the differences when discrepancies are detected, ensuring that the live environment matches the configurations stored in Git. This approach allows for declarative management of applications, making deployments more efficient and auditable while simplifying the overall process for the team.
+
+
 # What is Gitops?
-GitOps is an operational framework that applies DevOps principles, such as version control and continuous integration/continuous delivery (CI/CD), to the management of infrastructure. It automates the provisioning and configuration of infrastructure by using Git repositories as the central source of truth for defining the desired state of systems.
-In GitOps, teams utilize configuration files stored in Git, allowing them to manage infrastructure in a manner similar to how they handle application code. This approach enhances visibility and traceability of changes, making it easier to audit and reproduce issues. By leveraging familiar Git workflows, GitOps empowers developers to take on operational tasks, streamlining the deployment process and improving agility in responding to changes.
-GitOps is particularly effective in cloud-native environments, such as those using Kubernetes, where it facilitates continuous deployment and infrastructure management through declarative specifications. Overall, GitOps represents an evolution of Infrastructure as Code (IaC), enabling teams to automate and manage their infrastructure efficiently while maintaining a clear audit trail of all changes.
+
+GitOps is an operational framework that applies DevOps principles, such as IaC, Pull/Merge requests, version control, and continuous integration/continuous delivery (CI/CD), to infrastructure management. It automates infrastructure provisioning and configuration by using Git repositories as the central source of truth for defining the desired state of systems.
+
+In GitOps, teams utilize configuration files stored in Git, allowing them to manage infrastructure like how they handle application code. This approach enhances the visibility and traceability of changes, making it easier to audit and reproduce issues. By leveraging familiar Git workflows, GitOps empowers developers to take on operational tasks, streamlining the deployment process and improving agility in responding to changes.
+
+GitOps is particularly effective in cloud-native environments, such as those using Kubernetes, where it facilitates continuous deployment and infrastructure management through declarative specifications. Overall, GitOps represents an Infrastructure as Code (IaC) evolution, enabling teams to automate and manage their infrastructure efficiently while maintaining a clear audit trail of all changes.
+
+
 
 
 
