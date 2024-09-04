@@ -30,6 +30,8 @@ You can install kubectl by following the [official guide](https://kubernetes.io/
 For example, on Windows:
 
 curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/windows/amd64/kubectl.exe"
+
+
 chmod +x kubectl.exe
 
 
