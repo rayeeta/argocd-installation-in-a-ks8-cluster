@@ -49,6 +49,7 @@ To install kubectx on your local terminal using Git Bash on Windows, you can fol
 Check that kubectx and kubens are installed correctly by running:
 
 kubectx --help
+
 kubens --help
 
 
