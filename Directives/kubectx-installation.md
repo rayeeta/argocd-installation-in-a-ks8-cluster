@@ -8,17 +8,18 @@ To install kubectx on your local terminal using Git Bash on Windows, you can fol
    Download the kubectx and kubens scripts directly from their GitHub repository:
 
    curl -Lo kubectx https://github.com/ahmetb/kubectx/raw/master/kubectx
+   
    curl -Lo kubens https://github.com/ahmetb/kubectx/raw/master/kubens
    
 
-2. *Make the Scripts Executable:*
+3. *Make the Scripts Executable:*
 
    Ensure that the downloaded scripts are executable by modifying the permissions:
 
    chmod +x kubectx kubens
    
 
-3. **Move the Scripts to a Directory in Your PATH:**
+4. **Move the Scripts to a Directory in Your PATH:**
 
    Move the scripts to a directory that's included in your PATH. For instance, you can move them to /usr/local/bin:
 
