@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rayeeta/argocd-installation-in-a-ks8-cluster.git
     targetRevision: HEAD
-    path: dev
+    path: deploy-svc-files
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
