@@ -23,76 +23,60 @@ spec:
       prune: true
 
 
-/*
- This script is a Kubernetes ArgoCD Application manifest, which defines an application managed by ArgoCD. Below is a breakdown of each section:
+# This script is a Kubernetes ArgoCD Application manifest, which defines an application managed by ArgoCD. Below is a breakdown of each section:
 
-1. API Version and Kind 
-yaml
-Copy
-Edit
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-apiVersion: argoproj.io/v1alpha1 → Specifies that this resource is from ArgoCD's API.
-kind: Application → Defines this as an ArgoCD-managed application.
-2. Metadata
-yaml
-Copy
-Edit
-metadata:
-  name: myapp-argo-application
-  namespace: argocd
-name: myapp-argo-application → The name of the application in ArgoCD.
-namespace: argocd → The namespace where ArgoCD is installed and managing this application.
-3. Application Specification
-yaml
-Copy
-Edit
-spec:
-  project: default
-project: default → Assigns this application to the default ArgoCD project.
-4. Source Configuration (Where to Get the App)
-yaml
-Copy
-Edit
-  source:
-    repoURL: https://github.com/rayeeta/argocd-installation-in-a-ks8-cluster.git
-    targetRevision: HEAD
-    path: dev
-repoURL → Points to the Git repository where the application’s manifests are stored.
-targetRevision: HEAD → Deploys the latest commit from the main branch.
-path: dev → Specifies that ArgoCD should look inside the dev directory of the repository.
-5. Destination Configuration (Where to Deploy the App)
-yaml
-Copy
-Edit
-  destination: 
-    server: https://kubernetes.default.svc
-    namespace: myapp
-server: https://kubernetes.default.svc → Deploys the application to the in-cluster Kubernetes API server.
-namespace: myapp → Deploys the application into the myapp namespace in Kubernetes.
-6. Sync Policy (How ArgoCD Manages the App)
-yaml
-Copy
-Edit
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-CreateNamespace=true → Ensures that the myapp namespace is created automatically if it doesn’t exist.
-yaml
-Copy
-Edit
-    automated:
-      selfHeal: true
-      prune: true
-automated → Enables automatic synchronization.
-selfHeal: true → If Kubernetes resources drift from the Git state, ArgoCD will fix them automatically.
-prune: true → If resources are removed from Git, ArgoCD will delete them in the cluster.
-Summary
-This manifest defines an ArgoCD Application that:
+#1. API Version and Kind 
 
-Deploys from GitHub (rayeeta/argocd-installation-in-a-ks8-cluster)
-Uses files from the dev directory.
-Deploys to the myapp namespace in Kubernetes.
-Enables auto-sync, self-healing, and cleanup of deleted resources.
+#apiVersion: argoproj.io/v1alpha1 
+#kind: Application
+#apiVersion: argoproj.io/v1alpha1 → Specifies that this resource is from ArgoCD's API.
+#kind: Application → Defines this as an ArgoCD-managed application.
+#2. Metadata
 
-*/
+#metadata:
+ # name: myapp-argo-application
+  #namespace: argocd
+#name: myapp-argo-application → The name of the application in ArgoCD.
+#namespace: argocd → The namespace where ArgoCD is installed and managing this application.
+#3. Application Specification
+
+#spec:
+ # project: default
+#project: default → Assigns this application to the default ArgoCD project.
+#4. Source Configuration (Where to Get the App)
+
+#  source:
+ #   repoURL: https://github.com/rayeeta/argocd-installation-in-a-ks8-cluster.git
+  #  targetRevision: HEAD
+   # path: dev
+#repoURL → Points to the Git repository where the application’s manifests are stored.
+#targetRevision: HEAD → Deploys the latest commit from the main branch.
+#path: dev → Specifies that ArgoCD should look inside the dev directory of the repository.
+#5. Destination Configuration (Where to Deploy the App)
+
+#  destination: 
+ #   server: https://kubernetes.default.svc
+  #  namespace: myapp
+#server: https://kubernetes.default.svc → Deploys the application to the in-cluster Kubernetes API server.
+#namespace: myapp → Deploys the application into the myapp namespace in Kubernetes.
+#6. Sync Policy (How ArgoCD Manages the App)
+
+  #syncPolicy:
+  #  syncOptions:
+ #   - CreateNamespace=true
+#CreateNamespace=true → Ensures that the myapp namespace is created automatically if it doesn’t exist.
+
+#    automated:
+ #     selfHeal: true
+  #    prune: true
+#automated → Enables automatic synchronization.
+#selfHeal: true → If Kubernetes resources drift from the Git state, ArgoCD will fix them automatically.
+#prune: true → If resources are removed from Git, ArgoCD will delete them in the cluster.
+#Summary
+#This manifest defines an ArgoCD Application that:
+
+#Deploys from GitHub (rayeeta/argocd-installation-in-a-ks8-cluster)
+#Uses files from the dev directory.
+#Deploys to the myapp namespace in Kubernetes.
+#Enables auto-sync, self-healing, and cleanup of deleted resources.
+
