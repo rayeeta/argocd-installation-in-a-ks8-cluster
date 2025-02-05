@@ -17,3 +17,63 @@ spec:
         image: ereta19/argocdproject:1.1
         ports:
         - containerPort: 8080
+
+
+# This Kubernetes Deployment YAML file defines a Deployment for an application called myapp-application. 
+#Let's break it down section by section: 
+
+#1. API Version and Kind
+
+#apiVersion: apps/v1
+#kind: Deployment
+#apiVersion: apps/v1 → Specifies that this resource is a Deployment, which is managed under the apps/v1 API group.
+#kind: Deployment → Defines this resource as a Deployment, which is responsible for managing and scaling a set of identical Pods.
+#2. Metadata
+
+#metadata:
+ # name: myapp-application
+#name: myapp-application → Assigns a name to this Deployment. This is useful for referencing the Deployment within Kubernetes.
+#3. Specification (spec)
+#The spec section defines the desired state of the Deployment.
+
+#Selector
+
+ # selector:
+  #  matchLabels:
+ #     app: myapp
+#selector → Specifies which Pods this Deployment will manage.
+#matchLabels → Ensures that only Pods with the label app: myapp are controlled by this Deployment.
+#Replicas
+
+ # replicas: 2
+#replicas: 2 → Specifies that 2 Pods should be running at all times.
+#4. Pod Template
+#The template section describes how to create each Pod.
+
+#Metadata
+
+#  template:
+#    metadata:
+#      labels:
+#        app: myapp
+#The label app: myapp is applied to each Pod. This must match the selector above, ensuring the Deployment manages these Pods.
+#Pod Specification
+
+#    spec:
+  #    containers:
+#      - name: myapp
+#        image: ereta19/argocdproject:1.1
+#        ports:
+#        - containerPort: 8080
+#containers → Defines the list of containers inside each Pod.
+#name: myapp → Assigns a name to the container.
+#image: ereta19/argocdproject:1.1 → Specifies the Docker image to use. This image will be pulled from Docker Hub or a private registry.
+#ports → Defines the container's exposed port.
+#containerPort: 8080 → The application inside the container listens on port 8080.
+#Summary
+#Creates a Deployment named myapp-application.
+#Runs 2 replicas (Pods).
+#Each Pod runs a container using the image ereta19/argocdproject:1.1.
+#The application inside the container listens on port 8080.
+#The Deployment ensures the Pods are always running and automatically replaces failed Pods.
+
