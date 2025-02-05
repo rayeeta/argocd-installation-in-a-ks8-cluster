@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: ereta19/argocdproject:1.1
+        image: brightmindtech/ray:1.0
         ports:
         - containerPort: 8080
 
