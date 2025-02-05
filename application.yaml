@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/rayeeta/argocd-installation-in-a-ks8-cluster-project-step-by-step-using-kubeadm.git
+    repoURL: https://github.com/rayeeta/argocd-installation-in-a-ks8-cluster.git
     targetRevision: HEAD
     path: dev
   destination: 
