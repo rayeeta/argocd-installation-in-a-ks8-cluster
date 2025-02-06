@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: brightmindtech/ray:1.0
+        image: brightmindtech/test:1.0
         ports:
         - containerPort: 8080
 
